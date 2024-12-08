@@ -6,7 +6,14 @@ defmodule MyApiWeb.Router do
   end
 
   scope "/api", MyApiWeb do
+    pipe_through [:api, :authenticate_api]
+     resources "/users", UserController, except: [:new, :edit]
+  end
+
+   scope "/auth", MyApiWeb do
     pipe_through :api
+
+    post "/login", AuthController, :login
   end
 
   # Enable LiveDashboard and Swoosh mailbox preview in development
