@@ -39,7 +39,6 @@ defmodule MyApi.MixProject do
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:joken, "~> 2.0"},
       {:bcrypt_elixir, "~> 2.0"},
-      {:plug_jwt_auth, "~> 0.7.0"},
       {:cors_plug, "~> 3.0"},
       {:swoosh, "~> 1.5"},
       {:finch, "~> 0.13"},
