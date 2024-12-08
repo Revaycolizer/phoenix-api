@@ -40,6 +40,7 @@ defmodule MyApi.MixProject do
       {:joken, "~> 2.0"},
       {:bcrypt_elixir, "~> 2.0"},
       {:plug_jwt_auth, "~> 0.7.0"},
+      {:cors_plug, "~> 3.0"},
       {:swoosh, "~> 1.5"},
       {:finch, "~> 0.13"},
       {:telemetry_metrics, "~> 1.0"},

@@ -41,4 +41,12 @@ config :phoenix, :json_library, Jason
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
+
+# Configure Origin
+ config :cors_plug,
+  origin: ["http://localhost:4000", "http://localhost:3001"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"],
+  max_age: 86400,
+  expose: ["Authorization"], # If you're sending back an Authorization header
+  allow_credentials: true
 import_config "#{config_env()}.exs"
